@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Progress Calender</title>
+
+    <style>
+        body{
+            background-color: rgb(198, 198, 198);
+        }
+        .theCalender{
+            background-color: burlywood;
+            mix-blend-mode: color-burn;
+            min-width: 100px;
+            max-width: 750px;
+            padding: 10px;
+            box-sizing: border-box;
+        }
+        .theHead{
+            background-color: rgba(0, 0, 0, 0.553);
+            color: white;
+            letter-spacing: 2px;
+            font-size: larger;
+            height: 50px;
+            padding: 10px;
+            padding-left: 12px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .Dates{
+            margin: 5px;
+            display: grid;
+            grid-template-columns: repeat(7,100px);
+            grid-template-rows: repeat(5,100px);
+            justify-content: center;
+            align-items: center;
+        }
+        .DayBlock{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-weight: bold;
+            outline: 2px solid rgb(210, 255, 127);
+            height: 100px;
+        }
+        footer{
+            margin: auto;
+            background-color: dimgray;
+            color: antiquewhite;
+            padding: 50px;
+            font-size: larger;
+        }
+        .Holder{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        .aboutDate{
+            display: flex;
+            flex-direction: column;
+            gap: 0;
+            justify-content: center;
+            align-items: center;
+            align-self: center;
+            width: 90%;
+        }
+    </style>
+</head>
+<body>
+    <header>Progress Calender</header>
+
+    <div class="theCalender">
+
+        <div class="theHead" ><h3>January</h3></div>
+        <div class="Dates">
+
+            <div class="DayBlock">1</div>
+            <div class="DayBlock">2</div>
+            <div class="DayBlock">3</div>
+            <div class="DayBlock">4</div>
+            <div class="DayBlock day5">5</div>
+            <div class="DayBlock">6</div>
+            <div class="DayBlock">7</div>
+ 
+
+            <div class="DayBlock">8</div>
+            <div class="DayBlock">9</div>
+            <div class="DayBlock">10</div>
+            <div class="DayBlock">11</div>
+            <div class="DayBlock">12</div>
+            <div class="DayBlock">13</div>
+            <div class="DayBlock">14</div>
+
+
+            <div class="DayBlock">15</div>
+            <div class="DayBlock">16</div>
+            <div class="DayBlock">17</div>
+            <div class="DayBlock">18</div>
+            <div class="DayBlock">19</div>
+            <div class="DayBlock">20</div>
+            <div class="DayBlock">21</div>
+        
+
+            <div class="DayBlock">22</div>
+            <div class="DayBlock">23</div>
+            <div class="DayBlock">24</div>
+            <div class="DayBlock">25</div>
+            <div class="DayBlock">26</div>
+            <div class="DayBlock">27</div>
+            <div class="DayBlock">28</div>
+
+
+            <div class="DayBlock">29</div>
+            <div class="DayBlock">30</div>
+
+
+        </div>
+    </div>
+    <div class="Holder">
+        <div class="aboutDate">
+            <p>
+                <h4>Selected Date</h4>
+                
+                <h2 class="SelcDate">January 5<sup>th</sup></h2>
+                <h5 class="SelcDate">Asif's birthday</h5>
+        </div>
+        <div class="Addmore">
+            <div class="input"><input type="text" name="inp1" id="inp1"></div>
+        </div>
+    </div>
+
+    <footer>A Calender I needed</footer>
+
+    <script>
+        
+// Selescted Date
+
+const   Displaybtn = document.querySelector('.day5'), // The BTN to view User's Profile menu
+        Holder = document.getElementsByClassName("SelcDate");     //  User's Profile menu
+
+        // Maing Display hidden to make visible later on:
+Holder.style.display = "none";
+
+Displaybtn.onclick =()=> {  
+    // Function called when you click on 'Profile Picture' button element
+
+    if(Holder.style.display === "none"){
+        Holder.style.display = "";
+    } else {
+        Holder.style.display = "none";
+    }
+    
+}
+
+    </script>
+</body>
+</html>
